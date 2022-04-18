@@ -10,6 +10,7 @@ import About from './components/Pages/About/About';
 import Blogs from './components/Pages/Blogs/Blogs';
 import CheckOut from './components/Pages/CheckOut/CheckOut';
 import RequireAuth from './components/Pages/Login/RequireAuth/RequireAuth';
+import NotFound from './components/Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer> </Footer>
     </div>
