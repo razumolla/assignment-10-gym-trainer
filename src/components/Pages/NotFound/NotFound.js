@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div className='container text-center mt-5'>
+        <div className='container text-center mt-5' style={{ height: '60vh' }}>
             <div className='mt-6'>
                 <h1 className='h1 text-danger'>404</h1>
                 <h2 className='text-warning'> OPPS! PAGE NOT FOUND </h2>
