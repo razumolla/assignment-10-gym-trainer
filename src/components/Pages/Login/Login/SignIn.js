@@ -5,6 +5,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import './SignIn.css'
+
 
 const SignIn = () => {
     const emailRef = useRef('');
@@ -42,7 +44,7 @@ const SignIn = () => {
     }
 
     return (
-        <div className='container w-25  mx-auto'>
+        <div className='container w-25  mx-auto sign-in-section' >
             <h3 className='text-primary text-center mt-3'>Please SignIn</h3>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-2" controlId="formBasicEmail">
