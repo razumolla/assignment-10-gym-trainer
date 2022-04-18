@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "BODY BUILDING",
+        "price": "2550",
+        "description": "bodybuilding, a regimen of exercises designed to enhance the human body's muscular development and promote general health and fitness.",
+        "img": "https://www.gannett-cdn.com/presto/2021/07/21/USAT/dfbd657c-1ef5-4dd9-b355-1619bdc2645f-GettyImages-924491214.jpg"
+    },
+    {
+        "id": 2,
+        "name": "MUSCLE GAIN",
+        "price": "2200",
+        "description": "Studies from the CDC have found that muscle-building exercise can also improve balance, reduce the likelihood of falls, improve blood-sugar control, and improve sleep and mental health.",
+        "img": "https://miro.medium.com/max/1400/1*xk4zmUpGTcs3HpevFU9QgQ.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "WEIGHT LOSS",
+        "price": "1200",
+        "description": "Weight loss can reduce your blood pressure and cholesterol. It can also slash risk for diabetes, heart disease, stroke, gallbladder disease, and osteoarthritis.",
+        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+    }
+]

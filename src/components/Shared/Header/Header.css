@@ -7,24 +7,26 @@ nav {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
     padding: 0 10%;
     font-family: "Teko", sans-serif;
+    background-color: rgb(183, 235, 189);
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    font-weight: 700;
 }
 
 .link {
     text-decoration: none;
     margin-left: 15px;
     font-size: 20px;
-    color: #1e90c2;
+    color: black;
     transition: color ease-in-out 300ms;
 }
 
 .link:hover {
-    color: #1b4388;
+    color: #2b2efa;
 }
 
 .active-link {
@@ -32,5 +34,5 @@ nav {
     margin-left: 15px;
     font-size: 20px;
     transition: color ease-in-out 300ms;
-    color: #1b4388;
+    color: #4205f7;
 }

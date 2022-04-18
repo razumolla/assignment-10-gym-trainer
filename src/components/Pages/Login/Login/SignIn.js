@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../../../firebase.init'
-import SocialLogin from '../SocialLogin/SocialLogin';
+import auth from '../../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
-const Register = () => {
+const SignIn = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation()
     let from = location.state?.from?.pathname || "/";
     const [
-        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
     useEffect(() => {
         if (user) {
             navigate(from, { replace: true });
@@ -25,25 +25,26 @@ const Register = () => {
     }, [user])
 
 
+    let errorMassage;
+    if (error) {
+        errorMassage = <p className='text-danger'>Error: {error.message}  </p>
+    }
+
     if (loading) {
         return <Loading></Loading>
     }
-
-    const handleRegister = (event) => {
+    const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        createUserWithEmailAndPassword(email, password);
+        signInWithEmailAndPassword(email, password);
     }
+
     return (
         <div className='container w-25  mx-auto'>
-            <h3 className='text-primary text-center mt-3'>Please Register</h3>
-            <Form onSubmit={handleRegister}>
-                <Form.Group className="mb-2" controlId="formBasicName">
-                    <Form.Control type="text" placeholder="Your Name" required />
-                </Form.Group>
-
+            <h3 className='text-primary text-center mt-3'>Please SignIn</h3>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-2" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
@@ -56,12 +57,14 @@ const Register = () => {
                     Sign In
                 </Button>
             </Form>
+            {errorMassage}
 
-            <p>Already have an Account? <Link to="/signin" className='text-danger pe-auto text-decoration-none' >Please SignIn</Link> </p>
+            <p>New to GYM Center? <Link to="/register" className='text-danger pe-auto text-decoration-none' >Please Register</Link> </p>
+
 
             <SocialLogin></SocialLogin>
         </div>
     );
 };
 
-export default Register;
+export default SignIn;

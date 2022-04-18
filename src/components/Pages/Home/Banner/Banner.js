@@ -21,8 +21,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h4>HI THIS IS ZACSON</h4>
+                        <p> GYM TRAINER</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -33,8 +33,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Why you choose me? </h3>
+                        <p>My education level and experience is crucial. I am the best Trainer in Bangladesh. </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,9 +45,9 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
+                        <h3>Specialties and Philosophies</h3>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            <small>If you are passionate about a certain type of training like kickboxing or using kettlebells, you want to know that your trainer has experience with that</small>
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
