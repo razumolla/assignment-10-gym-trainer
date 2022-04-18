@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const { id, name, img, description, price } = service;
+    const {name, img, description, price } = service;
     return (
         <div className="card" style={{ width: '18rem' }}>
             <img className='card-img-top' src={img} alt="" />
